@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS accept;
+DROP SEQUENCE IF EXISTS accept_seq;
