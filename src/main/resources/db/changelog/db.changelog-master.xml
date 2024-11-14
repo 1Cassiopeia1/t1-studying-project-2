@@ -4,10 +4,10 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
-    <changeSet id="createAcceptTable" author="KMarkova">
-        <sqlFile encoding="utf8" path="/db/changelog/2024/09/13-11-changelog-01.sql"/>
+    <changeSet id="createEventTable" author="KMarkova">
+        <sqlFile encoding="utf8" path="db/changelog/2024/11/13-11-changelog-01.sql"/>
         <rollback>
-            <sqlFile encoding="utf8" path="/db/changelog/2024/09/13-11-changelog-01-rollback.sql"/>
+            <sqlFile encoding="utf8" path="db/changelog/2024/11/13-11-changelog-01-rollback.sql"/>
         </rollback>
     </changeSet>
 </databaseChangeLog>

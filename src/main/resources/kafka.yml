@@ -1,12 +1,12 @@
 t1:
   kafka:
-    bootstrap-servers: ${KAFKA_SERVERS:localhost:8097}
+    bootstrap-servers: ${KAFKA_SERVERS:localhost:9093}
     security.protocol: ${KAFKA_SECURITY_PROTOCOL:PLAINTEXT}
     max-poll-interval-ms: ${KAFKA_MAX_POLL_INTERVAL_MS:3000}
     max-partition-fetch-bytes: 300000
     session-timeout-ms: 60000
     consumer:
-      group-id: ${KAFKA_GROUP_ID:t1-demo}
+      group-id: ${KAFKA_GROUP_ID:tr-acceptation}
       auto-offset-reset: earliest
       max-poll-records: ${KAFKA_MAX_POLL_RECORDS:10}
       enable-auto-commit: false
@@ -21,8 +21,8 @@ t1:
       properties:
         spring.json.add.type.headers: ${KAFKA_TYPE_ID_HEADERS:false}
     topic:
-      t1_demo_transaction_accept: ${KAFKA_TRANSACTIONS_TOPIC:t1_demo_transaction_accept}
-      t1_demo_metrics: ${KAFKA_METRICS_TOPIC:t1_demo_metrics}
+      t1_demo_transaction_accept: ${KAFKA_TRANSACTION_ACCEPT_TOPIC:t1_demo_transaction_accept}
+      t1_demo_transaction_result: ${KAFKA_TRANSACTION_RESULT_TOPIC:t1_demo_transaction_result}
     listener:
       concurrency: ${KAFKA_CONCURRENCY:3}
       poll-timeout: 1000

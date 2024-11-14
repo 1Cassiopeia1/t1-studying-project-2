@@ -1,0 +1,11 @@
+CREATE SEQUENCE IF NOT EXISTS event_seq START WITH 1 INCREMENT BY 50;
+
+CREATE TABLE IF NOT EXISTS event
+(
+    id BIGINT PRIMARY KEY,
+    client_id BIGINT NOT NULL,
+    account_id BIGINT NOT NULL,
+    transaction_id BIGINT NOT NULL,
+    creation_timestamp TIMESTAMP NOT NULL
+);
+

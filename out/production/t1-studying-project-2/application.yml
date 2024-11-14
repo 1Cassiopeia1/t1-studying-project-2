@@ -1,13 +1,12 @@
-
 spring:
   config:
     import: kafka.yml
   application:
-    name: transaction_accept
+    name: t1-java-demof
   datasource:
-    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/transaction_accept}
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:5432/t1_demo}
     username: ${DATASOURCE_USERNAME:postgres}
-    password: ${DATASOURCE_PASSWORD:password}
+    password: ${DATASOURCE_PASSWORD:postgres}
     driverClassName: org.postgresql.Driver
   liquibase:
     enabled: true
@@ -36,7 +35,7 @@ logging:
   level:
     ROOT: INFO
     org.apache.kafka: ERROR
-    ru.t1.transaction.acceptation: DEBUG
+    ru.t1.java.demo.controller.ClientController: DEBUG
 
 management:
   endpoints:
@@ -45,10 +44,3 @@ management:
   endpoint:
     health.enabled: true
     prometheus.enabled: true
-
-t1:
-  transaction-block:
-    number: 3
-    period: 20s
-server:
-  port: 0
