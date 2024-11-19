@@ -2,6 +2,7 @@ package ru.t1.transaction.acceptation.kafka;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.kafka.annotation.DltHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.annotation.RetryableTopic;
@@ -17,6 +18,7 @@ import ru.t1.transaction.acceptation.service.AcceptService;
 @Slf4j
 @RequiredArgsConstructor
 @Component
+@ConditionalOnProperty(value = "t1.kafka.enabled", havingValue = "true")
 public class KafkaTransactionAcceptConsumer {
 
     private final AcceptService acceptService;
