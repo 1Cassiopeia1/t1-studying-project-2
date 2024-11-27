@@ -1,5 +1,11 @@
-
 spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          external:
+            client-id: ${CLIENT_ID:client_id}
+            client-secret: ${CLIENT_SECRET:client_secret}
   config:
     import: kafka.yml
   application:
@@ -51,4 +57,8 @@ t1:
     number: 3
     period: 20s
 server:
-  port: 0
+  port: 8081
+
+token:
+  signing:
+    key: ${TOKEN_SECRET_KEY:53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855}

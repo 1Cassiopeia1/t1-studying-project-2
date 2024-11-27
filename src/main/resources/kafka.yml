@@ -1,5 +1,6 @@
 t1:
   kafka:
+    enabled: true
     bootstrap-servers: ${KAFKA_SERVERS:localhost:9093}
     security.protocol: ${KAFKA_SECURITY_PROTOCOL:PLAINTEXT}
     max-poll-interval-ms: ${KAFKA_MAX_POLL_INTERVAL_MS:3000}

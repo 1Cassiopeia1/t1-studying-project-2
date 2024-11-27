@@ -2,6 +2,8 @@ package ru.t1.transaction.acceptation.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -12,7 +14,9 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 import org.hibernate.annotations.CreationTimestamp;
+import ru.t1.transaction.acceptation.dto.enums.TransactionStatus;
 
 import java.time.LocalDateTime;
 
@@ -20,6 +24,7 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Builder
+@Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "event")
@@ -38,6 +43,9 @@ public class Event {
 
     @Column(nullable = false)
     private Long transactionId;
+
+    @Enumerated(EnumType.STRING)
+    private TransactionStatus transactionStatus;
 
     @CreationTimestamp
     @Column(nullable = false)

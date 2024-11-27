@@ -1,0 +1,3 @@
+t1:
+  kafka:
+    enabled: false
