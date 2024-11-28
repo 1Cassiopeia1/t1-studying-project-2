@@ -1,6 +1,6 @@
 package ru.t1.transaction.acceptation.service;
 
-import ru.t1.transaction.acceptation.dto.TransactionAcceptDto;
+import com.example.t1projectspringbootstarter.dto.TransactionAcceptDto;
 
 public interface AcceptService {
 

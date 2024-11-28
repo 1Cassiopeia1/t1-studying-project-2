@@ -1,5 +1,6 @@
 package ru.t1.transaction.acceptation.controller;
 
+import com.example.t1projectspringbootstarter.dto.TransactionAcceptDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +8,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.t1.transaction.acceptation.dto.TransactionAcceptDto;
 import ru.t1.transaction.acceptation.service.AcceptService;
 
 @RestController
