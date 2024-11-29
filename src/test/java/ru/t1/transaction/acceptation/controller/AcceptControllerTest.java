@@ -1,5 +1,6 @@
 package ru.t1.transaction.acceptation.controller;
 
+import com.example.t1projectspringbootstarter.dto.TransactionAcceptDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.instancio.Instancio;
 import org.junit.jupiter.api.Test;
@@ -11,7 +12,6 @@ import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import ru.t1.transaction.acceptation.config.TestContainersConfig;
-import ru.t1.transaction.acceptation.dto.TransactionAcceptDto;
 import ru.t1.transaction.acceptation.service.AcceptService;
 
 import static org.mockito.Mockito.when;

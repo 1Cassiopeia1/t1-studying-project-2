@@ -1,5 +1,8 @@
 package ru.t1.transaction.acceptation.service;
 
+import com.example.t1projectspringbootstarter.config.KafkaProducer;
+import com.example.t1projectspringbootstarter.dto.TransactionAcceptDto;
+import com.example.t1projectspringbootstarter.dto.enums.TransactionStatus;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -15,9 +18,6 @@ import org.springframework.boot.test.system.OutputCaptureExtension;
 import org.springframework.test.util.ReflectionTestUtils;
 import ru.t1.transaction.acceptation.constants.ErrorLogs;
 import ru.t1.transaction.acceptation.dto.ResultDto;
-import ru.t1.transaction.acceptation.dto.TransactionAcceptDto;
-import ru.t1.transaction.acceptation.dto.enums.TransactionStatus;
-import ru.t1.transaction.acceptation.kafka.KafkaProducer;
 import ru.t1.transaction.acceptation.mappers.TransactionAcceptMapper;
 import ru.t1.transaction.acceptation.model.Event;
 import ru.t1.transaction.acceptation.repository.EventRepository;

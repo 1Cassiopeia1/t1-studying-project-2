@@ -1,6 +1,6 @@
 t1:
   kafka:
-    enabled: true
+    enabled: ${KAFKA_ENABLED:true}
     bootstrap-servers: ${KAFKA_SERVERS:localhost:9093}
     security.protocol: ${KAFKA_SECURITY_PROTOCOL:PLAINTEXT}
     max-poll-interval-ms: ${KAFKA_MAX_POLL_INTERVAL_MS:3000}
@@ -24,6 +24,8 @@ t1:
     topic:
       t1_demo_transaction_accept: ${KAFKA_TRANSACTION_ACCEPT_TOPIC:t1_demo_transaction_accept}
       t1_demo_transaction_result: ${KAFKA_TRANSACTION_RESULT_TOPIC:t1_demo_transaction_result}
+      client_id_registered: ${KAFKA_CLIENT_REGISTERED_TOPIC:t1_demo_client_registered}
+      t1_demo_metrics: ${KAFKA_METRICS_TOPIC:t1_demo_metrics}
     listener:
       concurrency: ${KAFKA_CONCURRENCY:3}
       poll-timeout: 1000

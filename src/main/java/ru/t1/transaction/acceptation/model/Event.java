@@ -1,5 +1,6 @@
 package ru.t1.transaction.acceptation.model;
 
+import com.example.t1projectspringbootstarter.dto.enums.TransactionStatus;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -16,7 +17,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 import org.hibernate.annotations.CreationTimestamp;
-import ru.t1.transaction.acceptation.dto.enums.TransactionStatus;
 
 import java.time.LocalDateTime;
 

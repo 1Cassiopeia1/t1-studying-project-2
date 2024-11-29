@@ -1,14 +1,14 @@
 package ru.t1.transaction.acceptation.service.impl;
 
+import com.example.t1projectspringbootstarter.config.KafkaProducer;
+import com.example.t1projectspringbootstarter.dto.TransactionAcceptDto;
+import com.example.t1projectspringbootstarter.dto.enums.TransactionStatus;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.t1.transaction.acceptation.constants.ErrorLogs;
 import ru.t1.transaction.acceptation.dto.ResultDto;
-import ru.t1.transaction.acceptation.dto.TransactionAcceptDto;
-import ru.t1.transaction.acceptation.dto.enums.TransactionStatus;
-import ru.t1.transaction.acceptation.kafka.KafkaProducer;
 import ru.t1.transaction.acceptation.mappers.TransactionAcceptMapper;
 import ru.t1.transaction.acceptation.model.Event;
 import ru.t1.transaction.acceptation.repository.EventRepository;
